@@ -1,6 +1,6 @@
 # ibm-healthcheck-operator
 
-pr
+pr update
 
 12345567890
 abcdef
