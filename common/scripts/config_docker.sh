@@ -16,6 +16,9 @@
 #
 
 KUBECTL=$(command -v kubectl)
+$KUBECTL config get-contexts
+$KUBECTL config use-context default
+$KUBECTL -n test-pods get nodes
 DOCKER_REGISTRY="docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-integration-docker-local"
 DOCKER_EDGE_REGISTRY="docker-na-public.artifactory.swg-devops.com/hyc-cloud-private-edge-docker-local"
 DOCKER_USERNAME=$(${KUBECTL} -n default get secret artifactory-cred -o jsonpath='{.data.username}' | base64 --decode)
